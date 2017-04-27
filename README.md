@@ -6,9 +6,8 @@ Spring Context from Groovy
 `spring-ctx-groovy` contain the class `ctx.App` class. This class
 is built with Groovy and exposes the Spring context statically.
 
-Contain the class `ctx.App` that exposes the Spring context statically.
-
-You can get a bean object from the context like this in **Java**:
+You can get a bean object from the context like this in **Java**, without the
+need to inject the bean into your class:
 
 ```java
 MyUserService myUserService = (MyUserService) ctx.App.context.getBean("myUserService");
@@ -141,12 +140,12 @@ $ ./gradlew publishToMavenLocal
 Links
 -----
 
- * Remote Shell DOC:
+ * **Remote Shell DOC**:
    http://docs.spring.io/spring-boot/docs/1.4.6.RELEASE/reference/html/production-ready-remote-shell.html
- * How to setup simple login to remote shell:
+ * **How to setup simple login to remote shell**:
    http://docs.spring.io/spring-boot/docs/1.4.1.RELEASE/api/org/springframework/boot/actuate/autoconfigure/CrshAutoConfiguration.html
- * CRaSH home: http://crashub.org/
- * `Unable to negotiate key exchange for server host key algorithms` error on shell startup fix:
+ * **CRaSH home**: http://crashub.org/
+ * `Unable to negotiate key exchange for server host key algorithms` **error on shell startup fix**:
    https://github.com/spring-projects/spring-boot/issues/3501
 
 
@@ -156,5 +155,7 @@ About
 Repo: https://github.com/grayshirts/spring-ctx-groovy
 
 Author: Mariano Ruiz <mrsarm@gmail.com>
+
+LICENSE: *********????????*************
 
 (2017) Grayshirts.
