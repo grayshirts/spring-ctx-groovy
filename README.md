@@ -1,7 +1,7 @@
-Spring Context From Groovy
+Spring Context from Groovy
 ==========================
 
-DEVELOPMENT IN PROGRESS...
+*DEVELOPMENT IN PROGRESS...*
 
 `spring-ctx-groovy` contain the class `ctx.App` class. This class
 is built with Groovy and exposes the Spring context statically.
@@ -50,6 +50,10 @@ Also exposes the properties of the project with the `prop` static method:
 > ctx.App.prop("server.context-path")
 /api
 ```
+
+You **DON'T** need to develop your project with Groovy to use this
+library in your Spring Project and access to the `ctx.App` class
+from your source code, or from the remote shell.
 
 
 Configuration
