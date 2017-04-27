@@ -1,0 +1,26 @@
+group 'ar.com.grayshirts'
+version '1.0.0.RC1'
+
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.10'
+    compile 'org.springframework:spring-context-support:4.2.4.RELEASE'
+}
