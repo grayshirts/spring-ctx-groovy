@@ -6,10 +6,12 @@ DEVELOPMENT IN PROGRESS...
 `spring-ctx-groovy` contain the class `ctx.App` class. This class
 is built with Groovy and exposes the Spring context statically.
 
+Contain the class `ctx.App` that exposes the Spring context statically.
+
 You can get a bean object from the context like this in **Java**:
 
 ```java
-MyUserService myUserService = (MyUserService) ctx.App.context.getBean("myUserService")
+MyUserService myUserService = (MyUserService) ctx.App.context.getBean("myUserService");
 ```
 
 Or like this with **Groovy**:
@@ -93,7 +95,7 @@ of your project:
 
 1. `dependencies` section:
 
-   ```
+   ```groovy
    compile 'ar.com.grayshirts:spring-ctx-groovy:1.0.0.RC1'
    // Remote Shell Library for Spring Boot applications
    compile 'org.springframework.boot:spring-boot-starter-remote-shell'
@@ -101,7 +103,7 @@ of your project:
 
 2. `repositories` section:
 
-   ```
+   ```groovy
    maven() {
        url "https://dl.bintray.com/grayshirts/public"
    }
@@ -130,6 +132,18 @@ Publish to your local Maven repo:
 ```bash
 $ ./gradlew publishToMavenLocal
 ```
+
+
+Links
+-----
+
+ * Remote Shell DOC:
+   http://docs.spring.io/spring-boot/docs/1.4.6.RELEASE/reference/html/production-ready-remote-shell.html
+ * How to setup simple login to remote shell:
+   http://docs.spring.io/spring-boot/docs/1.4.1.RELEASE/api/org/springframework/boot/actuate/autoconfigure/CrshAutoConfiguration.html
+ * CRaSH home: http://crashub.org/
+ * `Unable to negotiate key exchange for server host key algorithms` error on shell startup fix:
+   https://github.com/spring-projects/spring-boot/issues/3501
 
 
 About
