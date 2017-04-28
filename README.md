@@ -3,28 +3,28 @@ Spring Context from Groovy
 
 *DEVELOPMENT IN PROGRESS...*
 
-`spring-ctx-groovy` contain the class `ctx.App` class. This class
-is built with Groovy and exposes the Spring context statically.
+`spring-ctx-groovy` contain the class `ctx.App`, that
+it's built with Groovy and exposes the Spring context statically.
 
 You can get a bean object from the context like this in **Java**, without the
 need to inject the bean into your class:
 
 ```java
-MyUserService myUserService = (MyUserService) ctx.App.context.getBean("myUserService");
+MyUserService myUserService = (MyUserService) ctx.App.getContext().getBean("myUserService");
 ```
 
 Or like this with **Groovy**:
 
-```java
+```groovy
 def myUserService = ctx.App.myUserService
 ```
 
-But the most important feature is to use this library with the
+But the most important feature is to use with the
 [Remote Shell](http://docs.spring.io/spring-boot/docs/1.4.6.RELEASE/reference/html/production-ready-remote-shell.html)
-included in the *Spring Boot Actuator* module, to access from the console
-to the Spring Context, like in the *Grails Console*.
+included in the *Spring Boot Actuator* module, to access within the console through a SSH session
+to the Spring Context using the `repl groovy`, like in the awesome *Grails Console*.
 
-```bash
+```
 $ ssh -p 2000 user@localhost
 
 user@localhost's password:
@@ -156,6 +156,6 @@ Repo: https://github.com/grayshirts/spring-ctx-groovy
 
 Author: Mariano Ruiz <mrsarm@gmail.com>
 
-LICENSE: *********????????*************
+License: [Apache Software License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 (2017) Grayshirts.
