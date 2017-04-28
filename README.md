@@ -26,7 +26,6 @@ to the Spring Context using the `repl groovy`, like in the awesome *Grails Conso
 
 ```
 $ ssh -p 2000 user@localhost
-
 user@localhost's password:
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -41,6 +40,9 @@ Using repl groovy
 100123
 > ctx.App.myUserService.getById(100123).name
 Mariano Ruiz
+> ctx.App.contactDao.logger.effectiveLevel
+INFO
+> ctx.App.contactDao.logger.setLevel(ch.qos.logback.classic.Level.DEBUG)
 ```
 
 Also exposes the properties of the project with the `prop` static method:

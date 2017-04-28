@@ -1,8 +1,22 @@
-group 'ar.com.grayshirts'
-version '1.0.0.RC1'
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
 
 apply plugin: 'groovy'
 apply plugin: 'maven-publish'
+
+group 'ar.com.grayshirts'
+version '1.0.0.RC3'
+
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
@@ -14,8 +28,33 @@ repositories {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            from components.java
+        SpringCtxGroovy(MavenPublication) {
+            artifact jar
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USERNAME')
+    key  = System.getenv('BINTRAY_PASSWORD')
+
+    publications = ['SpringCtxGroovy']
+
+    pkg {
+        repo = 'public'
+        name = 'spring-ctx-groovy'
+        userOrg = 'grayshirts'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/grayshirts/spring-ctx-groovy.git'
+
+        githubRepo = 'grayshirts/spring-ctx-groovy' 
+        githubReleaseNotesFile = 'README.md'
+
+        version {
+            name = project.version
+            //desc = ""
+            released  = new Date()
+            vcsTag = project.version
         }
     }
 }
