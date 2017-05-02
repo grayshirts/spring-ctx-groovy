@@ -1,8 +1,6 @@
 Spring Context from Groovy
 ==========================
 
-*DEVELOPMENT IN PROGRESS...*
-
 `spring-ctx-groovy` contain the class `ctx.App`, that
 it's built with Groovy and exposes the Spring context statically.
 
@@ -74,7 +72,7 @@ of your project:
    <dependency>
        <groupId>ar.com.grayshirts</groupId>
        <artifactId>spring-ctx-groovy</artifactId>
-       <version>1.0.0.RC1</version>
+       <version>1.0.0</version>
    </dependency>
    <!-- Remote Shell Library for Spring Boot applications -->
    <dependency>
@@ -101,7 +99,7 @@ of your project:
 1. `dependencies` section:
 
    ```groovy
-   compile 'ar.com.grayshirts:spring-ctx-groovy:1.0.0.RC1'
+   compile 'ar.com.grayshirts:spring-ctx-groovy:1.0.0'
    // Remote Shell Library for Spring Boot applications
    compile 'org.springframework.boot:spring-boot-starter-remote-shell'
    ```
@@ -160,7 +158,9 @@ Links
 About
 -----
 
-Repo: https://github.com/grayshirts/spring-ctx-groovy
+Project: https://github.com/grayshirts/spring-ctx-groovy
+
+Bintray Artifacts Repository: https://bintray.com/grayshirts/public/spring-ctx-groovy
 
 Author: Mariano Ruiz <mrsarm@gmail.com>
 
