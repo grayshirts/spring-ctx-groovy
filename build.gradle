@@ -15,7 +15,7 @@ apply plugin: 'groovy'
 apply plugin: 'maven-publish'
 
 group 'ar.com.grayshirts'
-version '1.0.0.RC3'
+version '1.0.0'
 
 
 sourceCompatibility = 1.7
@@ -24,6 +24,12 @@ targetCompatibility = 1.7
 repositories {
     mavenCentral()
     jcenter()
+
+    maven { url "http://dl.bintray.com/grayshirts/public" }
+}
+
+task sourceJar(type: Jar) {
+    classifier "sources"
 }
 
 publishing {
@@ -39,6 +45,7 @@ bintray {
     key  = System.getenv('BINTRAY_PASSWORD')
 
     publications = ['SpringCtxGroovy']
+    //configurations = ['archives']
 
     pkg {
         repo = 'public'

@@ -138,6 +138,12 @@ Publish to your local Maven repo:
 $ ./gradlew publishToMavenLocal
 ```
 
+Upload to Bintray repo:
+
+```bash
+$ ./gradlew bintrayUpload
+```
+
 
 Links
 -----
