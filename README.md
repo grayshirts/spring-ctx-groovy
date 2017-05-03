@@ -1,6 +1,8 @@
 Spring Context from Groovy
 ==========================
 
+![Spring Context from Groovy](static/spring-ctx-groovy-session.gif "Spring Shell session")
+
 `spring-ctx-groovy` contain the class `ctx.App`, that
 it's built with Groovy and exposes the Spring context statically.
 
@@ -17,7 +19,7 @@ Or like this with **Groovy**:
 def myUserService = ctx.App.myUserService
 ```
 
-But the most important feature is to use with the
+But the most important feature is to use it with the
 [Remote Shell](http://docs.spring.io/spring-boot/docs/1.4.6.RELEASE/reference/html/production-ready-remote-shell.html)
 included in the *Spring Boot Actuator* module, to access within the console through a SSH session
 to the Spring Context using the `repl groovy`, like in the awesome *Grails Console*.
@@ -115,8 +117,6 @@ of your project:
 
 System Requirements
 -------------------
-
-To use the library or for development purpose, you need installed:
 
  * JDK 7+
 
