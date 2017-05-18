@@ -24,4 +24,8 @@ class App implements ApplicationContextAware {
     static String prop(String key) {
         context.getEnvironment().getProperty(key)
     }
+
+    static String json(Object obj) {
+        context.getBean(Class.forName("com.fasterxml.jackson.databind.ObjectMapper")).writeValueAsString(obj)
+    }
 }

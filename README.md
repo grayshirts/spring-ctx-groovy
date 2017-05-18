@@ -52,7 +52,19 @@ Also exposes the properties of the project with the `prop` static method:
 /api
 ```
 
-You **DON'T** need to develop your project with Groovy to use this
+When an object is returned, the repl prints a representation of the
+object (call the `toString()` method), but sometimes is not the
+best way to read the result, or you just need a JSON representation:
+
+```bash
+> ctx.App.json(statusObj)
+{"queue_info":{"active_count":0,"core_pool_size":50}}
+```
+
+The default [ObjectMapper](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-spring-mvc.html#howto-customize-the-jackson-objectmapper)
+is used to serialize to JSON.
+
+**NOTE**: You DON'T need to develop your project with Groovy to use this
 library in your Spring Project and access to the `ctx.App` class
 from your source code, or from the remote shell.
 
