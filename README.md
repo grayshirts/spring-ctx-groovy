@@ -86,7 +86,7 @@ of your project:
    <dependency>
        <groupId>ar.com.grayshirts</groupId>
        <artifactId>spring-ctx-groovy</artifactId>
-       <version>1.0.0</version>
+       <version>1.1.0</version>
    </dependency>
    <!-- Remote Shell Library for Spring Boot applications -->
    <dependency>
@@ -113,7 +113,7 @@ of your project:
 1. `dependencies` section:
 
    ```groovy
-   compile 'ar.com.grayshirts:spring-ctx-groovy:1.0.0'
+   compile 'ar.com.grayshirts:spring-ctx-groovy:1.1.0'
    // Remote Shell Library for Spring Boot applications
    compile 'org.springframework.boot:spring-boot-starter-remote-shell'
    ```
