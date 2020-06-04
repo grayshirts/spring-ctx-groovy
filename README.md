@@ -24,6 +24,14 @@ But the most important feature is to use it with the
 included in the *Spring Boot Actuator* module, to access within the console through a SSH session
 to the Spring Context using the `repl groovy`, like in the awesome *Grails Console*.
 
+> :warning: *[Deprecated Module]* Unfortunately, because the project rely on the Remote Shell that
+  was discontinued in Spring Boot 2.0+, the project only works with Spring Boot 1.x projects.
+  To debug a Spring Boot 2.0+ project with a shell console,
+  try [jshell-plugin](https://github.com/mrsarm/jshell-plugin#spring-boot-applications) along
+  with [spring-ctx](https://github.com/mrsarm/spring-ctx). Though they have some limitations, like
+  the need to build the project with JDK 9 or higher, and using Gradle (Maven not supported).
+
+
 ```
 $ ssh -p 2000 user@localhost
 user@localhost's password:
